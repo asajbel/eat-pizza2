@@ -1,0 +1,28 @@
+{
+  "name": "eat-pizza2",
+  "version": "1.0.0",
+  "description": "eat the pizza the sequel",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asajbel/eat-pizza2.git"
+  },
+  "author": "asajbel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asajbel/eat-pizza2/issues"
+  },
+  "homepage": "https://github.com/asajbel/eat-pizza2#readme"
+}
