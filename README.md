@@ -8,4 +8,4 @@ npm install
 [Express](https://expressjs.com/)
 [Handlebars](http://handlebarsjs.com/)
 [mysql2](https://www.npmjs.com/package/mysql2)
-[Sequleize](http://docs.sequelizejs.com/)
+[Sequelize](http://docs.sequelizejs.com/)
