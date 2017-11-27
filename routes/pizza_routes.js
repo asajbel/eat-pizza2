@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   app.get("/api/pizza", function(req, res) {
     db.Pizza.findAll({
-      include: ['Customer'],
+      include: [db.Customer],
       order: [
         ['updatedAt']
       ]
@@ -24,7 +24,7 @@ module.exports = function(app) {
   });
 
   app.get("/api/customer", function(req, res) {
-    db.Customer.findAll({}).then(function(data) {
+    db.Customer.findAll({include: ["Pizza"]}).then(function(data) {
       res.json(data);
     });
   });
