@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Pizza = sequelize.define("Pizza", {
+  var Customer = sequelize.define("Customer", {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -9,19 +9,14 @@ module.exports = function(sequelize, DataTypes) {
         	msg: "The name must have at least one character."
         }
       }
-    },
-    devoured: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
     }
   });
 
-  Pizza.associate = function(models) {
-  	Pizza.belongsTo(models.Customer,{
-  		foreignKey: {
-  		}
-  	});
-  }
+  Customer.associate = function(models) {
+    Customer.hasMany(models.Pizza, {
+      onDelete: "CASCADE"
+    });
+  };
 
-  return Pizza;
+  return Customer;
 };

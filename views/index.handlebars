@@ -12,10 +12,11 @@
         <div class="card-body">
           {{#each pizza}} {{#unless devoured}}
           <div class="row pizzaItem">
-            <div class="col-xl-10 col-lg-9">
+            <div class="col-12 pizzaName">
               {{name}}
             </div>
-            <div class="col-xl-2 col-lg-3" align="right">
+            <div class="col-12">
+              <input id="customerName{{id}}" class="customerName" type="text" placeholder="Name">
               <button class="btn btn-primary btn-pizza devour" data-id="{{id}}">Devour</button>
             </div>
           </div>
@@ -28,9 +29,14 @@
         </div>
         <div class="card-body">
           {{#each pizza}} {{#if devoured}}
-          <p class="pizzaItem">
-            {{name}}
-          </p>
+          <div class="row pizzaItem">
+            <div class="col-12 pizzaName">
+              {{name}}
+            </div>
+            <div class="col-12 customerEaten">
+              Pizza devoured by {{Customer.name}}
+            </div>
+          </div>
           {{/if}} {{/each}}
         </div>
       </div>

@@ -4,6 +4,7 @@
 ```
 npm install
 ```
+Run the schema.sql file in the db folder through a MySQL server with username root and no password using localhost and port 3306. 
 ## Dependencies
 [Express](https://expressjs.com/)
 [Handlebars](http://handlebarsjs.com/)
