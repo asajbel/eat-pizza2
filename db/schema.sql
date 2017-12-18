@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS pizza2_db;
+CREATE DATABASE pizza2_db;
+USE pizza_db;
